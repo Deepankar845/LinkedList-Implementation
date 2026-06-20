@@ -1,0 +1,29 @@
+import java.util.LinkedList;
+class QueueDemo {
+    LinkedList<String> queue = new LinkedList<>();
+    void enqueue(String str) {
+        queue.addLast(str);
+        System.out.println(str + " added to the queue.");
+    }
+    void dequeue() {
+        if (!queue.isEmpty())
+            System.out.println(queue.removeFirst() + " removed from the queue.");
+        else
+            System.out.println("Queue is empty.");
+    }
+    void display() {
+        System.out.println("Queue: " + queue);
+    }
+    public static void main(String[] args) {
+        QueueDemo obj = new QueueDemo();
+        obj.enqueue("Apple");
+        obj.enqueue("Banana");
+        obj.enqueue("Mango");
+        obj.display();
+        obj.dequeue();
+        obj.display();
+        obj.dequeue();
+        obj.dequeue();
+        obj.dequeue();
+    }
+}
